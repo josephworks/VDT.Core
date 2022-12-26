@@ -43,8 +43,6 @@ a, .btn-link {
 
 
 .wizard {
-    width: 50%;
-    max-width: 30rem;
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 1rem;
@@ -60,7 +58,6 @@ a, .btn-link {
 .wizard-steps {
     padding: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-    margin: 0 -0.5rem;
     display: flex;
 }
 
