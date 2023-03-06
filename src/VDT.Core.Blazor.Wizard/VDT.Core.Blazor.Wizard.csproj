@@ -8,7 +8,7 @@
 
     <PropertyGroup>
         <PackageId>VDT.Core.Blazor.Wizard</PackageId>
-        <Version>2.0.1</Version>
+        <Version>2.0.3</Version>
         <Title>VDT.Core.Blazor.Wizard</Title>
         <Description>Blazor component that helps you create wizard components with sequential steps, forward/back navigation, conditional completion of steps, step- and wizard-level events, and more</Description>
         <Authors>Maikel Bos, Joseph Robinson</Authors>
