@@ -24,7 +24,7 @@ public class WizardStep : ComponentBase
     public RenderFragment? ChildContent { get; set; }
 
     /// <summary>
-    ///     A callback that will be invoked when this step is rendered
+    ///     A callback that will be invoked when the step is rendered
     /// </summary>
     [Parameter]
     public EventCallback<WizardStepInitializedEventArgs> OnInitialize { get; set; }

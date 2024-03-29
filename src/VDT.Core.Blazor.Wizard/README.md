@@ -1,7 +1,6 @@
 ﻿# VDT.Core.Blazor.Wizard
 
-Blazor component that helps you create wizard components with sequential steps, forward/back navigation, conditional
-completion of steps, step- and wizard-level
+Blazor component that helps you create wizard components with sequential steps, forward/back navigation, conditional completion of steps, step- and wizard-level
 events, and more
 
 ## Features
@@ -9,7 +8,7 @@ events, and more
 - Fully customizable layout
 - Events for starting, stopping and completing the wizard
 - Steps completed only on your own conditions
-- Events for initializing and attempted completion of steps
+- Events for initializing and attempted competion of steps
 - Optional back navigation and cancelling
 
 ## Styling
@@ -27,12 +26,11 @@ The wizard can be provided with the following CSS classes:
 - `ButtonPreviousClass` gets applied to the previous button
 - `ButtonNextClass` gets applied to the next button
 - `ButtonFinishClass` gets applied to the finish button
-- `ContentContainerClass` gets applied to a `div` surrounding the content of the currently active step when using the
-  default layout
+- `ContentContainerClass` gets applied to a `div` surrounding the content of the currently active step when using the default layout
 
 ## Example
 
-```html
+```
 <div>
     <button @onclick="async () => await Wizard.Start()" class="btn btn-primary">Start wizard</button>
     <button @onclick="() => Wizard.Stop()" class="btn btn-secondary">Stop wizard</button>
@@ -121,8 +119,7 @@ The wizard can be provided with the following CSS classes:
 
 ## Layout
 
-A default layout is provided without any styling, but it's easy to supply your own layout using the layout context of a
-wizard. This gives you fine-grained
+A default layout is provided without any styling, but it's easy to supply your own layout using the layout context of a wizard. This gives you fine-grained
 control over which elements you want to render and which markup to use around them.
 
 ### Available layout elements
@@ -131,9 +128,9 @@ control over which elements you want to render and which markup to use around th
 - `Title` renders the `RenderFragment` `TitleContent`
 - `StepTitles` renders the titles of all steps
 - `Buttons` renders all buttons as enabled and needed in the following order:
-    - Cancel
-    - Previous
-    - Next / Finish
+  - Cancel
+  - Previous
+  - Next / Finish
 - `ButtonCancel` renders the cancel button only if enabled
 - `ButtonPrevious` renders the previous button only if enabled and a previous step is available
 - `ButtonNext` renders the next button if a next step is available
@@ -142,7 +139,6 @@ control over which elements you want to render and which markup to use around th
 
 ### Example
 
-```html
 <Wizard ButtonClass="wizard-button"
         ButtonPreviousClass="wizard-button-secondary"
         ButtonPreviousText="<< Prev"

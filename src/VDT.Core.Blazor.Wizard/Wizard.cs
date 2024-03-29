@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
@@ -150,19 +151,19 @@ public class Wizard : ComponentBase
     public bool IsActive => ActiveStepIndex.HasValue;
 
     /// <summary>
-    ///     A callback that will be invoked when this wizard is started
+    ///     A callback that will be invoked when the wizard is started
     /// </summary>
     [Parameter]
     public EventCallback<WizardStartedEventArgs> OnStart { get; set; }
 
     /// <summary>
-    ///     A callback that will be invoked when this wizard is stopped
+    ///     A callback that will be invoked when the wizard is stopped
     /// </summary>
     [Parameter]
     public EventCallback<WizardStoppedEventArgs> OnStop { get; set; }
 
     /// <summary>
-    ///     A callback that will be invoked when this wizard is finished because all steps of the wizard have been completed
+    ///     A callback that will be invoked when the wizard is finished because all steps of the wizard have been completed
     /// </summary>
     [Parameter]
     public EventCallback<WizardFinishedEventArgs> OnFinish { get; set; }
@@ -181,6 +182,8 @@ public class Wizard : ComponentBase
 
     internal bool IsLastStepActive => ActiveStepIndex.HasValue && ActiveStepIndex.Value == StepsInternal.Count - 1;
 
+    internal Action? StateHasChangedHandler { get; init; }
+
     /// <summary>
     ///     Open the wizard at the first step if it's not currently active
     /// </summary>
@@ -190,6 +193,7 @@ public class Wizard : ComponentBase
 
         ActiveStepIndex = 0;
         await OnStart.InvokeAsync(new WizardStartedEventArgs());
+        (StateHasChangedHandler ?? StateHasChanged)();
     }
 
     /// <summary>
