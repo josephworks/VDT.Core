@@ -1,10 +1,14 @@
 ﻿# VDT.Core.Blazor.GlobalEventHandler
 
-Blazor component that allows you to handle global window level events in your application
+Blazor component that allows you to handle global window level events in your application.
 
 ## Features
 
-- Window-level keyboard events that don't require focus on any element
+- Window-level events that don't require focus on any element:
+  - Keyboard events
+  - Mouse events
+  - Touch events
+  - General events
 
 ## Usage
 
@@ -13,14 +17,20 @@ that you want to handle. The available events are:
 
 - `OnKeyDown` which provides an optional `KeyboardEventArgs` parameter
 - `OnKeyUp` which provides an optional `KeyboardEventArgs` parameter
-- `OnResize` which provides an optional `ResizeEventArgs` parameter
 - `OnClick` which provides an optional `MouseEventArgs` parameter
+- `OnContextMenu` which provides an optional `MouseEventArgs` parameter
+- `OnDoubleClick` which provides an optional `MouseEventArgs` parameter
 - `OnMouseDown` which provides an optional `MouseEventArgs` parameter
 - `OnMouseUp` which provides an optional `MouseEventArgs` parameter
 - `OnMouseMove` which provides an optional `MouseEventArgs` parameter
-- `OnContextMenu` which provides an optional `MouseEventArgs` parameter
-- `OnDoubleClick` which provides an optional `MouseEventArgs` parameter
+- `OnTouchStart` which provides an optional `TouchEventargs` parameter
+- `OnTouchEnd` which provides an optional `TouchEventargs` parameter
+- `OnTouchCancel` which provides an optional `TouchEventargs` parameter
+- `OnTouchMove` which provides an optional `TouchEventargs` parameter
+- `OnResize` which provides an optional `ResizeEventArgs` parameter
 - `OnScroll` which provides an optional `ScrollEventArgs` parameter
+- `OnOffline` which provides an optional `WindowEventArgs` parameter
+- `OnOnline` which provides an optional `WindowEventArgs` parameter
 
 ### Example
 
